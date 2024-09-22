@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import DashBoard from "./Layouts/DashBoard";
+import Teacher_Dashboard from "./Layouts/Teacher_Dashboard";
 import Message_talk from "./components/Dashboard/DashboardStudents/Message_talk";
 import Student_Calender from "./components/Dashboard/DashboardStudents/Student_Calender";
 import Student_Classroom from "./components/Dashboard/DashboardStudents/Student_Classroom";
@@ -27,6 +28,36 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/dashboard/user",
+        element: <Student_Home />,
+      },
+      {
+        path: "calender",
+        element: <Student_Calender />,
+      },
+      {
+        path: "classroom",
+        element: <Student_Classroom />,
+      },
+      {
+        path: "courses",
+        element: <Student_Courses />,
+      },
+      {
+        path: "library",
+        element: <Student_Library />,
+      },
+      {
+        path: "messages",
+        element: <Message_talk />,
+      },
+    ],
+  },
+  {
+    path: "/dashboard/teacher",
+    element: <Teacher_Dashboard />,
+    children: [
+      {
+        path: "/dashboard/teacher",
         element: <Student_Home />,
       },
       {

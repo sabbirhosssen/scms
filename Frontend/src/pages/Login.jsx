@@ -21,11 +21,16 @@ const Login = () => {
     axios
       .post("http://localhost:8081/api/student/login", { email, password })
       .then((result) => {
+        const loginuser = {
+          first_name: result?.data?.alldata[0]?.first_name,
+          last_name: result?.data?.alldata[0]?.second_name,
+        };
+
         if (
           email === result?.data?.alldata[0]?.email &&
           password === result?.data?.alldata[0]?.password
         ) {
-          navigate("/dashboard/user");
+          navigate("/dashboard/user", { state: loginuser });
         } else {
           navigate("/");
           alert("wrong information");

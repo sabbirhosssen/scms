@@ -13,14 +13,13 @@ app.use(cors({
 app.use(express.json());
 // app.use(bodyParser.json());
 // app.use('/api/v1/student',require('./Routes/StudentRoutes'))
+
 app.use('/api/student', require('./Routes/StudentLogin'))
 
 
 app.use((err, req, res, next) => {
     res.status(err.status||500).send('Showing the APP USE ERROR')
 })
-
-
 app.get("/", (req, res)=>{
     res.status(200).send('Hey There, My Smart Campus Management System Node app');
 })

@@ -3,7 +3,9 @@ import { CgProfile } from "react-icons/cg";
 import { FaRegBell } from "react-icons/fa6";
 import { GoMail } from "react-icons/go";
 import { IoIosArrowDown } from "react-icons/io";
-const Header = () => {
+const Header = (props) => {
+  console.log(props?.first_name);
+
   return (
     <div className="flex justify-between items-center gap-4">
       <div className="w-6/12 ">
@@ -23,7 +25,10 @@ const Header = () => {
       </div>
       <div className="4/12 flex gap-2 items-center">
         <CgProfile />
-        <h6>sabbir hossen</h6>
+        <h6 className="text-sm flex justify-center items-center gap-2">
+          <span>{props?.first_name}</span>
+          <span>{props?.last_name}</span>
+        </h6>
         <IoIosArrowDown />
       </div>
     </div>

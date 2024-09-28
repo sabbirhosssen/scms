@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import home_background from "../Images/background_home.png";
 import homeimg from "../Images/home1.png";
 import homecap from "../Images/homecap2.png";
+import Accordion from "../components/AllComponents/Accordion";
 const Home = () => {
   const background_homes = {
     backgroundImage: ` url(${home_background})`,
@@ -29,9 +30,15 @@ const Home = () => {
           <button className="border-[#000] border-2 px-3 py-2 rounded-2xl text-md text-white bg-[#2525AD]">
             <Link to={"/login"}>Login as a Student</Link>
           </button>
-          <button className="border-[#000] border-2 px-3 py-2 rounded-2xl text-md font-bold text-[#000]">
-            Login as a Teacher
-          </button>
+          <div className="flex justify-center items-center border-[#000] border-2 ps-3 pe-1 py-2 rounded-2xl">
+            <Link
+              to={"/teacherLogin"}
+              className=" text-md font-bold text-[#000]"
+            >
+              Login as a Teacher
+            </Link>
+            <Accordion />
+          </div>
         </div>
       </div>
       <div className="w-[55%]  my-0  mr-0 ">

@@ -11,11 +11,13 @@ import Student_Courses from "./components/Dashboard/DashboardStudents/Student_Co
 import Student_Home from "./components/Dashboard/DashboardStudents/Student_Home";
 import Student_Library from "./components/Dashboard/DashboardStudents/Student_Library";
 import "./index.css";
+import AdminLogin from "./pages/AdminLogin";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 import Register from "./pages/Register";
+import TeacherLogin from "./pages/TeacherLogin";
 
 const router = createBrowserRouter([
   {
@@ -93,6 +95,14 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/teacherLogin",
+    element: <TeacherLogin />,
+  },
+  {
+    path: "/adminLogin",
+    element: <AdminLogin />,
   },
 
   {

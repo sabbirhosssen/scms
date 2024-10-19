@@ -12,7 +12,7 @@ import "../../../../index.css";
 
 const SideMenu = () => {
   return (
-    <div className=" bg-white   rounded-e-2xl pb-5">
+    <div className=" bg-white   rounded-e-2xl pb-0">
       <div className="flex justify-center items-center gap-2 mb-3 pt-4 px-4 pb-4">
         <img className="w-4/12" src={homecap} alt="" />
         <h6 className="text-3xl font-extrabold ...">
@@ -70,20 +70,17 @@ const SideMenu = () => {
         <div className=" hover:bg-blue-300 flex justify-start items-center gap-3 px-4 py-4 ps-[12%]">
           <MdOutlineMessage className="text-2xl text-[#2B59CE]" />
           <Link
-            to={"/dashboard/user/messages"}
+            to={"/dashboard/user/profile"}
             className="text-lg font-medium bg-clip-text text-transparent bg-gradient-to-r from-[#2B59CE] to-[#95aec5]"
           >
-            Messages
+            Profile
           </Link>
         </div>
         <div className=" hover:bg-blue-300 flex justify-start items-center gap-3 px-4 py-4 ps-[12%]">
           <BsQuestionCircleFill className="text-2xl text-gray-500" />
-          <Link
-            to={"/dashboard/user/help"}
-            className="text-lg font-medium bg-clip-text text-gray-500"
-          >
+          <div className="text-lg font-medium bg-clip-text text-gray-500">
             Help
-          </Link>
+          </div>
         </div>
         <div className=" hover:bg-blue-300 flex justify-start items-center gap-3 px-4 py-4 ps-[12%]">
           <img className="w-[11%]" src={setting_img} alt="" />

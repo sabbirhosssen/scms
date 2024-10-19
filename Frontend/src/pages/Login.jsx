@@ -22,6 +22,7 @@ const Login = () => {
       .post("http://localhost:8081/api/student/login", { email, password })
       .then((result) => {
         const loginuser = {
+          user_id: result?.data?.alldata[0]?.user_id,
           first_name: result?.data?.alldata[0]?.first_name,
           last_name: result?.data?.alldata[0]?.second_name,
         };
@@ -72,6 +73,7 @@ const Login = () => {
                 placeholder="Email"
                 onChange={handleEmailChange}
                 className="block border-2 border-[#000] hover:border-[#6d88b3] rounded-lg p-2 w-full mb-2"
+                required
               />
 
               <input
@@ -82,6 +84,7 @@ const Login = () => {
                 autoComplete="on"
                 onChange={handlePasswordChange}
                 className="block border-2 border-[#000] hover:border-[#6d88b3] rounded-lg p-2 w-full mb-4"
+                required
               />
               <button className="text-white font-semibold border border-[#000] bg-[#6d88b3] hover:border-[#6d88b3] rounded-lg p-1 w-full">
                 Login

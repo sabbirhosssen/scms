@@ -6,15 +6,21 @@ const Accordion = () => {
   return (
     <>
       <button
-        className=" active:bg-blue-500 active:text-white px-4 py-2 rounded-md focus:outline-none"
+        className=" active:bg-blue-500 active:text-white ps-2 pe-4 py-0 rounded-md focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
       </button>
-      {isOpen && (
-        <div className=" border-[#000] border-2 px-3 py-2 rounded-2xl gap-2">
+      {isOpen ? (
+        <div className="  px-3 py-0 rounded-2xl gap-1">
           <Link to={"/adminLogin"} className=" text-md font-bold text-[#000]">
             Admin
+          </Link>
+        </div>
+      ) : (
+        <div className="  pe-2 py-0 rounded-2xl gap-1">
+          <Link to={"/teacherLogin"} className=" text-md font-bold text-[#000]">
+            Login as a Teacher
           </Link>
         </div>
       )}

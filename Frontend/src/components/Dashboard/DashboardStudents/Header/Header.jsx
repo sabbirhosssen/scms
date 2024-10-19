@@ -4,7 +4,7 @@ import { FaRegBell } from "react-icons/fa6";
 import { GoMail } from "react-icons/go";
 import { IoIosArrowDown } from "react-icons/io";
 const Header = (props) => {
-  console.log(props?.first_name);
+  console.log(props);
 
   return (
     <div className="flex justify-between items-center gap-4">

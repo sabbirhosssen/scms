@@ -75,6 +75,7 @@ const Register = () => {
               placeholder="First Name "
               onChange={handleNameChange}
               className="border-2 border-[#000] rounded-xl px-2 py-1 w-72 "
+              required
             />
           </div>
           <div className="mb-4">
@@ -85,6 +86,7 @@ const Register = () => {
               placeholder="First Name "
               onChange={handleLastNameChange}
               className="border-2 border-[#000] rounded-xl px-2 py-1 w-72 "
+              required
             />
           </div>
           <div className="mb-4">
@@ -95,6 +97,7 @@ const Register = () => {
               placeholder="Student ID"
               onChange={handleStudentIdChange}
               className="border-2 border-[#000] rounded-xl px-2 py-1 w-72 "
+              required
             />
           </div>
           <div className="mb-4">
@@ -105,6 +108,7 @@ const Register = () => {
               placeholder="Email"
               onChange={handleEmailChange}
               className="border-2 border-[#000] rounded-xl px-2 py-1 w-72"
+              required
             />
           </div>
           <div className="mb-6">
@@ -116,6 +120,7 @@ const Register = () => {
               autoComplete="on"
               onChange={handlePasswordChange}
               className="border-2 border-[#000] rounded-xl px-2 py-1 w-72"
+              required
             />
           </div>
           <button className="text-white font-semibold border hover:border-[#000] bg-[#6d88b3]  rounded-lg p-1 w-full">

@@ -10,6 +10,7 @@ import Student_Classroom from "./components/Dashboard/DashboardStudents/Student_
 import Student_Courses from "./components/Dashboard/DashboardStudents/Student_Courses";
 import Student_Home from "./components/Dashboard/DashboardStudents/Student_Home";
 import Student_Library from "./components/Dashboard/DashboardStudents/Student_Library";
+import Student_Profile from "./components/Dashboard/DashboardStudents/Student_Profile";
 import "./index.css";
 import AdminLogin from "./pages/AdminLogin";
 import Contact from "./pages/Contact";
@@ -49,8 +50,8 @@ const router = createBrowserRouter([
         element: <Student_Library />,
       },
       {
-        path: "messages",
-        element: <Message_talk />,
+        path: "profile",
+        element: <Student_Profile />,
       },
     ],
   },

@@ -31,12 +31,6 @@ const Home = () => {
             <Link to={"/login"}>Login as a Student</Link>
           </button>
           <div className="flex justify-center items-center border-[#000] border-2 ps-3 pe-1 py-2 rounded-2xl">
-            <Link
-              to={"/teacherLogin"}
-              className=" text-md font-bold text-[#000]"
-            >
-              Login as a Teacher
-            </Link>
             <Accordion />
           </div>
         </div>

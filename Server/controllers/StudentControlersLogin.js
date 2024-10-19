@@ -92,7 +92,39 @@ const studentRegister = async (req, res) => {
     }
     
 }
-module.exports = { studentLogin,studentRegister };
+const getstudentsid = async (req, res) => {
+    try {
+        const studnetid = req.params.id;
+        if (!studnetid) {
+            return res.status(404).send({
+                success: false,
+                messsage:'invalid or Provide Student id'
+            })
+        }
+        const data =await db.query(`SELECT * FROM register WHERE user_id=?`,[studnetid]);
+        if (!data) {
+            return res.status(405).send({
+                success: false,
+                messsage:'No Records Found'
+            })
+        }
+        res.status(201).send({
+            success: true,
+            messsage: 'Studnet by id',
+            studentdetails:data[0]
+            
+        })
+    } catch (error) {
+        console.log(error);
+        res.status(501).send({
+            success:false,
+            messsage: 'Error in Get studetn by ID',
+            error
+        })
+    }
+    
+}
+module.exports = { studentLogin,studentRegister,getstudentsid  };
 
 
 
